@@ -14,6 +14,10 @@ echo "Checking VPS"
 IZIN=$( curl https://raw.githubusercontent.com/rioxy/scAuto/main/server/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
+
+else
+echo -e "${red}Permission Declined...${NC}"
+fi
 mkdir /var/lib/premium-script;
 echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
 read -p "Hostname / Domain: " host
@@ -53,8 +57,4 @@ echo ""
 echo " Reboot 10 Sec"
 sleep 10
 reboot
-
-else
-echo -e "${red}Permission Declined...${NC}"
-fi
 

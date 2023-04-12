@@ -17,7 +17,7 @@ echo -e "${green}Permission Accepted...${NC}"
 mkdir /var/lib/premium-script;
 echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
 read -p "Hostname / Domain: " host
-echo "Domain=$host" >> /var/lib/premium-script/ipvps.conf
+echo "ip=$host" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/rioxy/scAuto/main/install/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #rm -f /root/ins-vt.sh
 #rm -f /root/go.sh
